@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="author" content="Matthew Baker">
+<meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+<meta name="description" content="MonoMuse website redesign project">
+
+<title>MonoMuse - Buy Tickets</title>
+</head>
+
+<body onload="addYear()">
+
+<header>
+    <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a id="navselected" href="tickets.html">Tickets</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
+</header>
+
+<div class="main">
+
+    <h1>Buy Tickets</h1>
+
+    <table border="1">
+
+        <tr>
+            <th>Ticket Type</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>General</td>
+            <td>Standard admission to all exhibitions.</td>
+            <td>$15</td>
+        </tr>
+
+        <tr>
+            <td>Student</td>
+            <td>Discounted admission with valid student ID.</td>
+            <td>$10</td>
+        </tr>
+
+        <tr>
+            <td>Member</td>
+            <td>Free admission for MonoMuse members.</td>
+            <td>$0</td>
+        </tr>
+
+    </table>
+
+</div>
+
+<footer>
+<p>© <span id="copyYear"></span> MonoMuse</p>
+</footer>
+
+</body>
+</html>
