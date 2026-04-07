@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Matthew Baker">
+  <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+  <meta name="description" content="MonoMuse website redesign project">
+
+  <title>MonoMuse - Explore</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+</head>
+
+<body onload="addYear()">
+
+<header>
+  <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+  <nav class="navbar" id="myNavbar">
+    <a href="../index.html">Home</a>
+    <a id="navselected" href="explore.html">Explore</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="tickets.html">Tickets</a>
+    <a href="checkout.html">Checkout</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a>
+  </nav>
+</header>
+
+<div class="main">
+  <h1>Explore</h1>
+  <p>Learn about the mission and history of MonoMuse.</p>
+</div>
+
+<footer>
+  <p>© <span id="copyYear"></span> MonoMuse</p>
+</footer>
+
+</body>
+</html>
