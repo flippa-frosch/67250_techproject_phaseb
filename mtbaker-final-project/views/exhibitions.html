@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>Exhibitions</title>
+
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+  <script src="../static/explore.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <div id="logo-text">MonoMuse</div>
+  <nav class="navbar" id="myNavbar" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a id="navselected" href="exhibitions.html">Exhibitions</a>
+    <a href="tickets.html" class="cta">Buy Tickets</a>
+    <a href="membership.html">Membership</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</a>
+  </nav>
+</header>
+
+<div class="main">
+  <h1>Exhibitions</h1>
+
+  <h2>Digital Dreams</h2>
+  <p>
+    Digital Dreams explores how artificial intelligence and machine learning collaborate with artists to create
+    evolving digital artworks. Visitors can observe how algorithms generate visual patterns, music, and immersive
+    projections in real time.
+  </p>
+
+  <h3 class="accordion-header">Learn More</h3>
+  <p class="accordion-content">
+    This exhibition showcases generative art systems and real-time AI collaboration tools used by modern artists.
+  </p>
+
+  <h2>Interactive Realities</h2>
+  <p>
+    Interactive Realities invites visitors to step into installations that respond to movement, sound, and touch.
+    Using motion tracking and projection mapping, the exhibition transforms visitors from observers into participants.
+  </p>
+
+  <h3 class="accordion-header">Learn More</h3>
+  <p class="accordion-content">
+    These installations use sensors and projection systems to create immersive, responsive environments.
+  </p>
+
+  <h2>Gallery</h2>
+  <img id="galleryImage" src="../static/1.jpg" alt="Contemporary museum exhibit display" loading="lazy">
+
+  <div class="gallery-controls">
+    <button aria-label="Previous image">Previous</button>
+    <button aria-label="Next image">Next</button>
+  </div>
+</div>
+
+<footer>
+  <p>© <span id="copyYear"></span> MonoMuse</p>
+</footer>
+
+</body>
+</html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".accordion-header").click(function(){
+    $(this).next(".accordion-content").slideToggle();
+  });
+});
+</script>
