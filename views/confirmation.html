@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <title>MonoMuse Confirmation</title>
+
+  <link rel="stylesheet" href="../static/style.css">
+  <script src="../static/script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <div id="logo-text">MonoMuse</div>
+  <nav class="navbar" id="myNavbar" aria-label="Main navigation">
+    <a href="../index.html">Home</a>
+    <a href="explore.html">Explore</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="tickets.html" class="cta">Buy Tickets</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">☰</a>
+  </nav>
+</header>
+
+<main class="main">
+  <h1>Order Confirmation</h1>
+  <div id="confirmation" aria-live="polite"></div>
+</main>
+
+<footer>
+  <p>© <span id="copyYear"></span> MonoMuse</p>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const confirmationDiv = document.getElementById("confirmation");
+  const order = JSON.parse(localStorage.getItem("lastOrder"));
+
+  if (!order) {
+    confirmationDiv.innerHTML = "<p>No order found. Please place a ticket order.</p>";
+    return;
+  }
+
+  confirmationDiv.innerHTML = `
+    <p>Thank you for your order!</p>
+    <p><strong>Visit Date:</strong> ${order.visitDate}</p>
+    <p><strong>Ticket Type:</strong> ${order.ticketType}</p>
+    <p><strong>Quantity:</strong> ${order.quantity}</p>
+    <p><strong>Total:</strong> $${order.total.toFixed(2)}</p>
+    <p><strong>Email:</strong> ${order.email}</p>
+    ${order.zip ? `<p><strong>Zip:</strong> ${order.zip}</p>` : ""}
+    <p>${order.mailingList ? "You've joined our mailing list." : ""}</p>
+  `;
+
+  localStorage.removeItem("lastOrder");
+});
+</script>
+
+</body>
+</html>
